@@ -1,7 +1,39 @@
 # ByteDev.VisualStudio.Templates
 
-Visual Studio templates for new project creation.
+Visual Studio 2022 templates for new project creation.
 
-## Import template
+## Create project template
 
-To import a template locally copy the required `.zip` template file from `src\Templates` to: `C:\Users\<user_name>\Documents\Visual Studio 2019\Templates\ProjectTemplates`.
+1. Edit your code project how you want it.
+2. Within Visual Studio 2022 navigate to:
+    - Project -> Export Template... -> Project template (type)
+    - Select the project you want to create a template from the pulldown menu
+
+The project template will be bundled up as a `.zip` file. Within the `.zip` file there will be:
+- A template icon (`.ico` file)
+- The .NET project file itself (for example `.csproj` file)
+- A Visual Studio template file (`.vstemplate` file)
+
+## Import project template
+
+A project template can be imported into your instance of Visual Studio.
+
+To import a template locally copy the required `.zip` template file, for example one from `src\Templates\Projects`, to: 
+`C:\Users\%USERPROFILE%\Documents\Visual Studio 2022\Templates\ProjectTemplates`
+
+Now when you goto add a new project in Visual Studio your new imported project template type should be available for you to select.
+
+## Remove project template
+
+To remove a project template so it is no longer available simply goto:
+`C:\Users\%USERPROFILE%\Documents\Visual Studio 2022\Templates\ProjectTemplates`
+
+Find the `.zip` file for the project template and delete the file.
+
+## Further information
+
+- [How to create project templates](https://learn.microsoft.com/en-us/visualstudio/ide/how-to-create-project-templates?view=vs-2022)
+- [How to substitute parameters in a template](https://learn.microsoft.com/en-us/visualstudio/ide/how-to-substitute-parameters-in-a-template?view=vs-2022)
+
+If you have the Visual Studio SDK installed, you can wrap the finished template in a VSIX file for deployment by using the VSIX Project template. 
+For more information, see [Get started with the VSIX project template](https://learn.microsoft.com/en-us/visualstudio/extensibility/getting-started-with-the-vsix-project-template?view=vs-2022).
